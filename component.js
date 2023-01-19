@@ -11,7 +11,8 @@ class Component {
 
     #randomize(value) {
         const questions = [this.a1, this.a2, this.a3, this.a4];
-        if (value) questions.shuffle(); 
+        console.log(value);
+        if (value) questions.shuffle();
         return `
             <li data-value='${questions[0].correcta}'>${questions[0].enunciado}</li>
             <li data-value='${questions[1].correcta}'>${questions[1].enunciado}</li>

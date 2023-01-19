@@ -12,7 +12,7 @@ Object.defineProperty(Document.prototype, "play", {
         let id = 0;
         for (const card of cardStack) {
             let component = new Component(card[1].pregunta, card[1].q1, card[1].q2, card[1].q3, card[1].q4, id);
-            this.appendComponentToDOM(component.getComponent());
+            this.appendComponentToDOM(component.getComponent(checkBoxValue));
             component.setCorrectTrigger();
             id++;
         }
