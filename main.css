@@ -53,12 +53,16 @@
 }
 
 @media only screen and (max-width: 768px) {
+  #title {
+    font-size: 1.5rem;
+  }
+
   .card-wrapper {
     position: absolute;
-    left: 45%;
+    left: 40%;
     /* transform: translate(-38%); */
     height: auto;
-    width: 60%;
+    width: 80%;
     margin-top: 0;
   }
 
