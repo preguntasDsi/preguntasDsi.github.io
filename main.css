@@ -54,15 +54,14 @@
 
 @media only screen and (max-width: 768px) {
   #title {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .card-wrapper {
     position: absolute;
-    left: 40%;
-    /* transform: translate(-38%); */
+    left: 41.3%;
     height: auto;
-    width: 80%;
+    width: 85%;
     margin-top: 0;
   }
 
@@ -75,13 +74,13 @@
   }
   
   .card h1 {
-    font-size: 1rem;
+    font-size: 0.5rem;
     margin-top: 5px;
     text-align: center;
   }
 
   .card ul li {
-    font-size: 12px;
+    font-size: 8px;
   }
 
   #score-board {
