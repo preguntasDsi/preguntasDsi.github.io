@@ -21,12 +21,13 @@ Object.defineProperty(Document.prototype, "play", {
 
 Object.defineProperty(Document.prototype, "prepareData", {
     value: function () {
+        // Get the raw data from the DOM and remove all the double quotes
         const raw_data = this.getElementById('raw-data').innerText.replace(/"/g, '');
 
-        // Replace all double quotes with single quotes
+        // Split the data by ';' and ',' and store it in a 2D array
         const splitted_data = raw_data.split(';').map((e) => e.split(','));
 
-        // Replace spaces in the beginning and end of each element
+        // Remove spaces at the beginning and end of each element
         for (let i = 0; i < splitted_data.length; i++) {
             for (let j = 0; j < splitted_data[i].length; j++) {
                 splitted_data[i][j] = splitted_data[i][j].trim();
@@ -59,7 +60,6 @@ Object.defineProperty(Document.prototype, "prepareData", {
     },
 });
 
-
 Object.defineProperty(Array.prototype, "shuffle", {
     value: function () {
         for (let i = this.length - 1; i > 0; i--) {
@@ -75,10 +75,10 @@ const setChanges = function (data) {
     let endRange = parseInt(this.getElementById('end-value').value);
 
     if (iniRange < 0 || endRange > 71 || iniRange > endRange) {
-        alert('Rango [0, 48]');
+        alert('Modo sexo solo [0, 71]');
         return;
     } else if (iniRange == endRange) {
-        alert('Rango [0, 48]');
+        alert('Modo sexo solo [0, 71] y no [0, 0]');
         return;
     }
     
