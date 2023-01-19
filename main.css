@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600&family=Inconsolata:wght@700&display=swap");
+
+@counter-style repeating-emoji {
+  system: cyclic;
+  symbols: "\1F5FF" "\1F4A3" "\1F335" "\1F33B";
+  suffix: " ";
+}
+
+* {
+  /* font-family: Inconsolata, monospace; */
+  font-family: "IBM Plex Mono", monospace;
+}
+
+::selection {
+  background: #fce562 !important;
+}
+
+.card-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  height: auto;
+  width: 40rem;
+  margin-top: 0;
+}
+
+.card {
+  padding: 15px;
+  margin: 20px;
+  height: 100%;
+  width: 100%;
+  border: 4px solid black;
+}
+
+.card h1 {
+  font-size: 2rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.card ul {
+  list-style-type: repeating-emoji;
+}
+
+.card ul li {
+  margin: 15px;
+}
+
+.card ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
