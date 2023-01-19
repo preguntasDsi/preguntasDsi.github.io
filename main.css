@@ -58,11 +58,10 @@
   }
 
   .card-wrapper {
-    position: absolute;
-    left: 41.3%;
-    height: auto;
+    position: relative;
+    left: 50%;
     width: 85%;
-    margin-top: 0;
+    transform: translateX(-60%);
   }
 
   .card {
@@ -72,7 +71,7 @@
     width: 100%;
     border: 2px solid black;
   }
-  
+
   .card h1 {
     font-size: 0.5rem;
     margin-top: 5px;
@@ -85,5 +84,14 @@
 
   #score-board {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 491px) {
+  .card-wrapper {
+    position: relative;
+    left: 50%;
+    width: 85%;
+    transform: translateX(-59%);
   }
 }
